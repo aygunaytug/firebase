@@ -25,10 +25,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
         password: _password,
       );
       print("User Registered : ${userCredential.user!.email}");
-      Navigator.pushReplacement(
+      Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => LoginPage(),
+            builder: (context) => LoginScreen(),
           ));
     } catch (e) {
       print("Eror During Registration : $e");
